@@ -3,7 +3,7 @@ const axios = require('axios');
 const app = express();
 
 
-const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzQ5MDIzOTgzLCJpYXQiOjE3NDkwMjM2ODMsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjNjMjc4NTdiLTllN2QtNDE3NS1hYjhmLWJhMzEwZTI1ODBmMCIsInN1YiI6ImRna2FrYWQwOUBnbWFpbC5jb20ifSwiZW1haWwiOiJkZ2tha2FkMDlAZ21haWwuY29tIiwibmFtZSI6ImRhcnNoYW4gZ2FqYW5hbiBrYWthZCIsInJvbGxObyI6IjcyMzA5NjIxbCIsImFjY2Vzc0NvZGUiOiJLUmpVVVUiLCJjbGllbnRJRCI6IjNjMjc4NTdiLTllN2QtNDE3NS1hYjhmLWJhMzEwZTI1ODBmMCIsImNsaWVudFNlY3JldCI6ImNrQ21qZnVndUNjZEdkZXUifQ.cP9r6HWBWAnqpMhNwA-0e89SD7vjfbeiELEVvRty_xg';
+const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiZXhwIjoxNzQ5MDI0MzAzLCJpYXQiOjE3NDkwMjQwMDMsImlzcyI6IkFmZm9yZG1lZCIsImp0aSI6IjNjMjc4NTdiLTllN2QtNDE3NS1hYjhmLWJhMzEwZTI1ODBmMCIsInN1YiI6ImRna2FrYWQwOUBnbWFpbC5jb20ifSwiZW1haWwiOiJkZ2tha2FkMDlAZ21haWwuY29tIiwibmFtZSI6ImRhcnNoYW4gZ2FqYW5hbiBrYWthZCIsInJvbGxObyI6IjcyMzA5NjIxbCIsImFjY2Vzc0NvZGUiOiJLUmpVVVUiLCJjbGllbnRJRCI6IjNjMjc4NTdiLTllN2QtNDE3NS1hYjhmLWJhMzEwZTI1ODBmMCIsImNsaWVudFNlY3JldCI6ImNrQ21qZnVndUNjZEdkZXUifQ.wyey8sYYgpNpkJ3QUQXE1ZHC_NiC67WMYAejzParv_Q';
 const PORT = 9876;
 
 
@@ -29,7 +29,7 @@ app.get('/numbers/:numberid', async (req, res) => {
 
   try {
     const source = axios.CancelToken.source();
-    setTimeout(() => source.cancel(), 1000); // timeout
+    setTimeout(() => source.cancel(), 800); // timeout
 
     const response = await axios.get(url, {
       headers: {
